@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Starter</title>
+    <title>OAS-NMSS</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 
@@ -257,10 +257,10 @@
     <footer class="main-footer">
 
         <div class="float-right d-none d-sm-inline">
-            Anything you want
+          Attendence System
         </div>
 
-        <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2023 <a href="https://gopalpoudel.com.np">Developer</a>.</strong> All rights reserved.
     </footer>
 </div>
 
