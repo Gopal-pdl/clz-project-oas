@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\register;
 use App\Http\Controllers\Students;
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +22,7 @@ Route::prefix('/')->group(function () {
     })->name('home.page');
 
     Route::post('/', [Students::class, 'ssid'])->name('sid_search');
+    Route::post('/', [register::class, 'ssid'])->name('sid_search');
 });
 
 Route::get('/dashboard', function () {
