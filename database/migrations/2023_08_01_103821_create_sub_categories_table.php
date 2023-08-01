@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('transactions', function (Blueprint $table) {
+        Schema::create('sub_categories', function (Blueprint $table) {
             $table->id();
-            $table->decimal('amount', 10, 2);
-            $table->tinyInteger('for_what'); //0 for deposit and 1 for withdraw and 2 redeposit
-            $table->boolean('flag');
+            $table->foreignId('category_id')->references('id')->on('categories');
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('transactions');
+        Schema::dropIfExists('sub_categories');
     }
 };
