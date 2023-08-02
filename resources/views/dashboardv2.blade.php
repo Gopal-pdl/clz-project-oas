@@ -217,6 +217,8 @@
                                 </li>
                             </ul>
                         </li>
+                        @if(\Illuminate\Support\Facades\Auth::user()->hasRole('admin'))
+
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-th text-red"></i>
@@ -225,6 +227,10 @@
                                 </p>
                             </a>
                         </li>
+                        @endif
+
+                        @if(\Illuminate\Support\Facades\Auth::user()->hasRole('admin'))
+
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-th text-blue"></i>
@@ -233,6 +239,9 @@
                                 </p>
                             </a>
                         </li>
+                        @endif
+
+                        @if(\Illuminate\Support\Facades\Auth::user()->hasRole('admin|teacher'))
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-th text-green"></i>
@@ -241,6 +250,9 @@
                                 </p>
                             </a>
                         </li>
+                        @endif
+
+
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-th text-white"></i>
@@ -249,6 +261,9 @@
                                 </p>
                             </a>
                         </li>
+
+                        @if(\Illuminate\Support\Facades\Auth::user()->hasRole('admin'))
+
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-th text-yellow"></i>
@@ -257,6 +272,7 @@
                                 </p>
                             </a>
                         </li>
+                        @endif
                     </ul>
                 </nav>
 

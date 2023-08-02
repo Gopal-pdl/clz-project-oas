@@ -25,9 +25,15 @@ Route::prefix('/')->group(function () {
     Route::post('/', [register::class, 'ssid'])->name('sid_search');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboardv2');
-})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::prefix('/dashboard')->group(function (){
+
+Route::get('/', [\App\Http\Controllers\Dashboard::class, 'index'])->name('dashboard');
+
+
+
+})->middleware(['auth', 'verified', 'role:admin|teacher']);
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
