@@ -11,12 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('category_subjects', function (Blueprint $table) {
+        Schema::create('semesters', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('category_id')->references('id')->on('categories');
-            $table->foreignId('sub_category_id')->references('id')->on('sub_categories');
-            $table->string('subject_name');
-            $table->boolean('flag')->default(1);
+            $table->string('semester', 5);
             $table->timestamps();
         });
     }
@@ -26,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('category_subjects');
+        Schema::dropIfExists('semesters');
     }
 };
