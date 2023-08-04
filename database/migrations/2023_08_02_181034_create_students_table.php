@@ -14,9 +14,11 @@ return new class extends Migration
         Schema::create('students', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('rand_id');
             $table->foreignId('fiscal_year_id')->references('id')->on('fiscal_years');
             $table->foreignId('year_id')->nullable()->references('id')->on('years');
             $table->foreignId('semester_id')->nullable()->references('id')->on('semesters');
+            $table->foreignId('organization_id')->references('id')->on('organizations');
             $table->timestamps();
         });
     }

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreignId('student_id')->references('id')->on('students');
             $table->string('phone_no', 15);
             $table->string('Address', 50);
+            $table->foreignId('organization_id')->references('id')->on('organizations');
             $table->timestamps();
         });
     }

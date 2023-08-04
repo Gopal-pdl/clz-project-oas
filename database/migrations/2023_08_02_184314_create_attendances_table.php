@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreignId('teacher_id')->references('id')->on('teachers');
             $table->foreignId('subject_id')->references('id')->on('subjects');
             $table->string('details')->nullable();
+            $table->foreignId('organization_id')->references('id')->on('organizations');
             $table->timestamps();
         });
     }

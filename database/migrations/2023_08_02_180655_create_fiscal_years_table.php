@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->date('year');
             $table->string('nepali_year', 15);
+            $table->foreignId('organization_id')->references('id')->on('organizations');
             $table->timestamps();
         });
     }
