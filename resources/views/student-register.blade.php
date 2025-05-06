@@ -50,7 +50,11 @@
                                 <div class="invalid-feedback">Please fill out this field.</div>
                             </div>
 
+<<<<<<< HEAD
                             <div class="card">
+=======
+                            <div class="card card-outline card-success">
+>>>>>>> 84bcfc8ccb7f5a749bccdee04c2aaf4f0215db94
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label for="year">Duration In Year:</label>
@@ -78,6 +82,33 @@
                                 </div>
                             </div>
 
+<<<<<<< HEAD
+=======
+
+
+                            <div class="card card-outline card-primary ">
+                                <div class="card-body">
+                                    <div class="card-title">Parent Details:</div>
+
+                                    <div class="form-group">
+                                        <label for="parentName">Parent Details:</label>
+                                        <input type="text" name="parentName" class="form-control">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="parentName">Parent Phone No:</label>
+                                        <input type="text" name="parentPhone" class="form-control">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="parentName">Address:</label>
+                                        <input type="text" name="parentAddress" class="form-control">
+                                    </div>
+
+                                </div>
+                            </div>
+
+>>>>>>> 84bcfc8ccb7f5a749bccdee04c2aaf4f0215db94
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>

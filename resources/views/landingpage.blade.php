@@ -19,6 +19,8 @@
     <link href="css/styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -40,6 +42,7 @@
                         <li class="nav-item"><a class="nav-link" href="{{route('register')}}">Register</a></li>
 
 
+                        @else
                         @else
 
                         <a class="nav-link" href="{{route('login')}}">Login</a></li>
@@ -118,6 +121,37 @@
                         </div>
                     </div>
                 </div>
+
+                @if(request()->get('sid'))
+                    @php
+
+                        $id = request()->get('sid');
+
+                        $stutdents = \App\Models\Student::where('rand_id', $id)->first();
+
+
+
+                     @endphp
+
+
+                    <span id="student"></span>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">
+                                  <h2><span class="text-sm text-muted">{{$stutdents->rand_id}}</span> <span>{{$stutdents->name}}</span></h2>
+                                </div>
+                            </div>
+                            <div class="card-body">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endif
+
             </div>
         </section>
     </main>
@@ -132,6 +166,8 @@
         </div>
     </footer>
     <!-- Bootstrap core JS-->
+    <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+
     <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
