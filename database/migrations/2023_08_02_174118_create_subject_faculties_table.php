@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreignId('faculty_id')->references('id')->on('faculties');
             $table->foreignId('year_id')->nullable()->references('id')->on('years');
             $table->foreignId('semester_id')->nullable()->references('id')->on('semesters');
+            $table->foreignId('organization_id')->references('id')->on('organizations');
             $table->timestamps();
         });
     }

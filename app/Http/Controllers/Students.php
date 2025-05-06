@@ -21,10 +21,10 @@ if($validator-> fails()){
 
 
 //user information get garxau
-$student = Student::where('roll',$request->sid)->first();
+$student = Student::where('roll',$request->Rand_id)->first();
 if($student){
 return redirect()-> back()->with('success', 'got info');
-    
+
 }
 
 return redirect()-> back()->withErrors('wrong input');

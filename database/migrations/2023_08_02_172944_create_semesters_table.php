@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('semesters', function (Blueprint $table) {
             $table->id();
             $table->string('semester', 5);
+            $table->foreignId('organization_id')->references('id')->on('organizations');
             $table->timestamps();
         });
     }

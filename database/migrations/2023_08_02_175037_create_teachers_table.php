@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name', 50);
             $table->string('number', 50);
+            $table->foreignId('organization_id')->references('id')->on('organizations');
             $table->timestamps();
         });
     }
